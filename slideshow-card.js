@@ -51,7 +51,7 @@ class SlideshowCard extends Polymer.Element {
         hass.states[this.config.folder].attributes.file_list.forEach(item => {
           const image = document.createElement('img');
           var fileLocation = item.substring(29);
-          console.log("image: " + fileLocation)
+          console.log("image: " + fileLocation);
           image.setAttribute("src", "/local" + fileLocation);
           image.className = 'slides fade';
           image.style.setProperty("width", "100%");
@@ -72,7 +72,7 @@ class SlideshowCard extends Polymer.Element {
         hass.states[this.config.folder].attributes.file_list.forEach(item => {
           if(!this.images.includes(item)){
             const image = document.createElement('img');
-            var fileLocation = item.substring(11);
+            var fileLocation = item.substring(29);
             image.setAttribute("src", "/local" + fileLocation);
             image.className = 'slides fade';
             image.style.setProperty("width", "100%");
